@@ -2,6 +2,7 @@ package com.example.biblioteca;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -26,22 +27,35 @@ public class github_act extends AppCompatActivity {
         spinner.setAdapter(adap);
 
         String libro = spinner.getSelectedItem().toString();
-        int CFa= 5000;
-        int CRe = 12000;
-        int CAL = 45000;
+
 
         if (libro.equals("Farenheith"))
         {
-            textView.setText(new StringBuilder().append("El costo de ").append("Farenheith ").append("Es de ").append(CFa).toString());
+            Intent i = new Intent(this, github_act.class);
+            i.putExtra("mensaje1", "El costo de Farenheith es de: 5000 ");
+            startActivity(i);
+
+            String m1 = getIntent().getStringExtra("mensaje1");
+            textView.setText(m1);
         }
         else if (libro.equals("Revival"))
         {
-            textView.setText(new StringBuilder().append("El costo de ").append("Revival ").append("Es de ").append(CRe).toString());
+            Intent i = new Intent(this, github_act.class);
+            i.putExtra("mensaje2", "El costo de Revival es de: 12000 ");
+            startActivity(i);
+
+            String m2 = getIntent().getStringExtra("mensaje2");
+            textView.setText(m2);
         }
         else if (libro.equals("El Alquimista"))
         {
-            textView.setText(new StringBuilder().append("El costo de ").append("El Alquimista ").append("Es de ").append(CAL).toString());
-        }
-    }
+            Intent i = new Intent(this, github_act.class);
+            i.putExtra("mensaje3", "El costo de El Alquimista es de: 45000 ");
+            startActivity(i);
 
+            String m3 = getIntent().getStringExtra("mensaje3");
+            textView.setText(m3);
+        }
+
+    }
 }

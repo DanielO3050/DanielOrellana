@@ -74,4 +74,5 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this,github_act.class);
         startActivity(i);
     }
+
 }
