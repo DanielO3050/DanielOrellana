@@ -3,6 +3,7 @@ package com.example.biblioteca;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
@@ -22,7 +23,7 @@ public class github_act extends AppCompatActivity {
         spinner.setAdapter(adap);
     }
 
-    public void libros()
+    public void libros(View v)
     {
         int Farenheith= 5000;
         int Revival = 12000;
