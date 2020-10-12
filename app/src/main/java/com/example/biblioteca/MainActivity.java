@@ -61,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String s) {
+
+            progress.setVisibility(View.INVISIBLE);
             Intent i = new Intent(getBaseContext(),Home_act.class);
             startActivity(i);
         }
