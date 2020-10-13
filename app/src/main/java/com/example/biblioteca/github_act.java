@@ -28,34 +28,28 @@ public class github_act extends AppCompatActivity {
 
         String libro = spinner.getSelectedItem().toString();
 
-
         if (libro.equals("Farenheith"))
         {
-            Intent i = new Intent(this, github_act.class);
-            i.putExtra("mensaje1", "El costo de Farenheith es de: 5000 ");
-            startActivity(i);
-
-            String m1 = getIntent().getStringExtra("mensaje1");
+            Intent a = new Intent(this, github_act.class);
+            a.putExtra("mensaje1", "El costo de Farenheith es de: 5000 ");
+            String m1 = a.getStringExtra("mensaje1");
             textView.setText(m1);
         }
-        else if (libro.equals("Revival"))
+        if (libro.equals("Revival"))
         {
-            Intent i = new Intent(this, github_act.class);
-            i.putExtra("mensaje2", "El costo de Revival es de: 12000 ");
-            startActivity(i);
-
-            String m2 = getIntent().getStringExtra("mensaje2");
+            Intent b = new Intent(this, github_act.class);
+            b.putExtra("mensaje2", "El costo de Revival es de: 12000 ");
+            String m2 = b.getStringExtra("mensaje2");
             textView.setText(m2);
         }
-        else if (libro.equals("El Alquimista"))
+        if (libro.equals("El Alquimista"))
         {
-            Intent i = new Intent(this, github_act.class);
-            i.putExtra("mensaje3", "El costo de El Alquimista es de: 45000 ");
-            startActivity(i);
-
-            String m3 = getIntent().getStringExtra("mensaje3");
+            Intent c = new Intent(this, github_act.class);
+            c.putExtra("mensaje3", "El costo de El Alquimista es de: 45000 ");
+            String m3 = c.getStringExtra("mensaje3");
             textView.setText(m3);
         }
 
     }
+
 }
