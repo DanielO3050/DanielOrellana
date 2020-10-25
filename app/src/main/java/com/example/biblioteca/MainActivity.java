@@ -73,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
     public void Github(View v)
     {
         Intent i = new Intent(this,github_act.class);
+        i.putExtra("mensaje1", "El costo de Farenheith es de: 5000 ");
+        i.putExtra("mensaje2", "El costo de Revival es de: 12000 ");
+        i.putExtra("mensaje3", "El costo de El Alquimista es de: 45000 ");
         startActivity(i);
 
     }
