@@ -23,13 +23,10 @@ public class github_act extends AppCompatActivity {
         spinner= (Spinner)findViewById(R.id.spinner);
         textView1 =(TextView)findViewById(R.id.t2);
 
-        String[] lista1 = {"Farenheith", "Revival", "El Alquimista"};
+        String[] lista1 = {"Farenheith", "Revival", "El Alquimista", "El Poder", "Despertar"};
 
         ArrayAdapter<String> adap = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista1);
         spinner.setAdapter(adap);
-
-
-
 
     }
     public void Mostrar(View v)
@@ -37,14 +34,28 @@ public class github_act extends AppCompatActivity {
         String m1 = getIntent().getStringExtra("mensaje1");
         String m2 = getIntent().getStringExtra("mensaje2");
         String m3 = getIntent().getStringExtra("mensaje3");
+        String m4 = getIntent().getStringExtra("mensaje4");
+        String m5 = getIntent().getStringExtra("mensaje5");
         String libro = spinner.getSelectedItem().toString();
 
-        if (libro.equals("Farenheith")) {
+        if (libro.equals("Farenheith"))
+        {
             textView1.setText(m1);
-        } else if (libro.equals("Revival")) {
+        }
+        else if (libro.equals("Revival"))
+        {
             textView1.setText(m2);
-        } else if (libro.equals("El Alquimista")) {
+        }
+        else if (libro.equals("El Alquimista"))
+        {
             textView1.setText(m3);
+        }
+        else if (libro.equals("El Poder"))
+        {
+            textView1.setText(m4);
+        }
+        else if (libro.equals("Despertar")) {
+            textView1.setText(m5);
         }
     }
 }
